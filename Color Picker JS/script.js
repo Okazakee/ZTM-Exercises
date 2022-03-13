@@ -11,10 +11,8 @@ var body = document.getElementById("gradient");
 // personal vars
 var button = document.getElementById("btn");
 
-
-// 1. and 2.- Function call to override default color inputs values at loading, passively completing second task.
+// 1st and 2nd tast - Function call to override default color inputs values at loading, passively completing second task.
 setGradient();
-
 
 // main exercise function
 function setGradient() {
@@ -29,8 +27,9 @@ function getRandColor() {
 	var randomColor2 = '#'+Math.floor(Math.random()*16777215).toString(16);
     body.style.background = "linear-gradient(to right, " + randomColor1	+ ", " + randomColor2 + ")";
 	css.textContent = body.style.background + ";";
+	color1.value = randomColor1;
+	color2.value = randomColor2;
 }
-
 
 // main exercise base calls
 color1.addEventListener("input", setGradient);
